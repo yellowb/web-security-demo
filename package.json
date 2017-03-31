@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yellowb/web-security-demo/issues"
   },
-  "homepage": "https://github.com/yellowb/web-security-demo#readme"
+  "homepage": "https://github.com/yellowb/web-security-demo#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

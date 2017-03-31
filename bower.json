@@ -14,5 +14,9 @@
     "client/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jQuery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
 }
