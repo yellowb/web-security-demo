@@ -25,15 +25,22 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/check', function (req, res, next) {
-
-    console.log('Check: ' + checkUserPwd(req.body.userid, req.body.password));
-
     if(checkUserPwd(req.body.userid, req.body.password)) {
+        console.log('Login successfully.');
+        req.session.userid = req.body.userid;
         res.redirect('/comments/list');
     }
     else {
+        console.log('Login failed.');
+        req.body.userid = null;
         res.redirect('/login');
     }
+});
+
+router.get('/logout', function (req, res, next) {
+    console.log('Logout.');
+    req.body.userid = null;
+    res.redirect('/login');
 });
 
 module.exports = router;
