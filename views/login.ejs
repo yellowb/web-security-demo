@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Comments</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css">
 </head>
 <body>
 
-<p>HIHIHI</p>
-<h1>message: <%= message %></h1>
-<h1>script: <%- scripts %></h1>
-
+<h1>You should login first!</h1>
+<form action="/login/check">
+    User ID:<br>
+    <input type="text" name="userid"><br>
+    Password:<br>
+    <input type="password" name="password"><br><br>
+    <input type="submit" value="Login">
+    <input type="reset">
+</form>
 
 <script type="text/javascript" src="../static/lib/jQuery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-
-
 
 </html>

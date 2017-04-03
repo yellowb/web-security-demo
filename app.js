@@ -7,6 +7,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
+//var multer = require('multer');
+var expressSession = require('express-session');
 
 var app = express();
 
@@ -19,12 +21,14 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(multer());
 app.use(cookieParser());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
 // Routes
 app.use('/comments', require('./routes/comments'));
+app.use('/login', require('./routes/login'));
 
 
 //// catch 404 and forward to error handler
