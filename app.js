@@ -31,7 +31,7 @@ app.use(expressSession({
     saveUninitialized: false,
     cookie: {
         httpOnly: false,
-        maxAge: 1000 * 600 * 10
+        maxAge: 1000 * 60 * 100
     }
 }));
 

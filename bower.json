@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "jQuery": "^3.2.1",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jquery.cookie": "jquery-cookie#^1.4.1"
   }
 }
