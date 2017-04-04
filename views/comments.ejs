@@ -9,8 +9,24 @@
 <body>
 
 <p><a href="/login/logout">Logout</a></p>
-<p>HIHIHI</p>
-<h1>message: <%= message %></h1>
+<h1>Post your comments!</h1>
+<h2>Welcome! <%= userid %></h2>
+
+<ol>
+    <% for (var i = 0; i < comments.length; i++) { %>
+    <li>
+        <div>
+            <!--<span style="text-align:left">-->
+            <!--<%- comments[i].id %></span>-->
+            <span style="text-align:left">
+            <%- comments[i].comment %></span>
+            by
+            <span style="text-align:left">
+            <%- comments[i].author %></span>
+        </div>
+    </li>
+    <% } %>
+</ol>
 
 
 
