@@ -11,18 +11,48 @@
 </head>
 <body>
 
-<p><a href="/login/logout">Logout</a>
-    <a href="/comments/list">Comments</a></p>
+<p><a class="bg-primary" href="/login/logout">Logout</a>
+    <a class="bg-primary" href="/comments/list">Comments</a></p>
 
-<h1>Welcome! <%= userid %>. You can search anything!</h1>
-
-<input id="keyword" type="text" name="keyword"/>
-<button id="button" type="button">Search</button>
-<br/>
-
-<div>
-    <p id="result"></p>
+<div class="jumbotron text-center">
+    <h1>Welcome!
+        <mark><%= userid %></mark>. Search anything!
+    </h1>
 </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-center-block">
+
+                <div class="input-group">
+                    <input style="font-size: 22pt" id="keyword" type="text" class="form-control input-lg" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button id="button" class="btn btn-default input-lg">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            <br/>
+
+            <div>
+                <h2 id="result"></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<input id="keyword" type="text" name="keyword"/>-->
+<!--<button id="button" type="button">Search</button>-->
+<!--<br/>-->
+
+<!--<div>-->
+    <!--<p id="result"></p>-->
+<!--</div>-->
 
 <script type="text/javascript" src="../static/javascripts/searchService.js"></script>
 </body>

@@ -16,8 +16,7 @@
 
 <div class="jumbotron text-center">
     <h1>Welcome!
-        <mark><%= userid %></mark>
-        . Post your comments!
+        <mark><%= userid %></mark>. Post your comments!
     </h1>
 </div>
 
@@ -38,49 +37,17 @@
 
 <div class="container">
     <h2>Comments</h2>
-
-
-
-
-
     <ol class="list-group">
         <% for (var i = 0; i < comments.length; i++) { %>
         <li class="list-group-item">
-
             <h4 class="list-group-item-heading"><%- comments[i].comment %> by <%- comments[i].author %></h4>
-
             <% if(comments[i].canRemove) { %>
             <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a>
             <% } %>
-
-
         </li>
         <% } %>
     </ol>
-
 </div>
-
-<!--<h3>Comments: </h3>-->
-<!--<ol>-->
-    <!--<% for (var i = 0; i < comments.length; i++) { %>-->
-    <!--<li>-->
-        <!--<div>-->
-            <!--<span style="text-align:left">-->
-            <!--[<%- comments[i].id %>]</span>-->
-            <!--<span style="text-align:left">-->
-            <!--<%- comments[i].comment %></span>-->
-            <!--by-->
-            <!--<span style="text-align:left">-->
-            <!--<%- comments[i].author %></span>-->
-            <!--<% if(comments[i].canRemove) { %>-->
-            <!-- -   <span style="text-align:left">-->
-                <!--<a href="<%= 'remove?id=' + comments[i].id %>">Remove</a></span>-->
-            <!--<% } %>-->
-        <!--</div>-->
-    <!--</li>-->
-    <!--<% } %>-->
-<!--</ol>-->
-
 
 
 </body>
