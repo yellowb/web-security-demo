@@ -11,38 +11,75 @@
 </head>
 <body>
 
-<p><a href="/login/logout">Logout</a>
-<a href="/search">Search</a></p>
+<p><a class="bg-primary" href="/login/logout">Logout</a>
+<a class="bg-primary" href="/search">Search</a></p>
 
-<h1>Welcome! <%= userid %>. Post your comments!</h1>
+<div class="jumbotron text-center">
+    <h1>Welcome!
+        <mark><%= userid %></mark>
+        . Post your comments!
+    </h1>
+</div>
 
-<form action="/comments/post" method="post">
-    <textarea rows="4" cols="50" placeholder="Write your comment here!" name="comment"></textarea><br>
-    <input type="submit" value="Submit">
-    <input type="reset">
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-center-block">
+            <form action="/comments/post" method="post">
+                <div class="form-group">
+                    <textarea style="font-size: 22pt" class="form-control" rows="4" id="comment" name="comment" placeholder="Write your comment here!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="reset" class="btn btn-default">
+            </form>
 
-
-<h3>Comments: </h3>
-<ol>
-    <% for (var i = 0; i < comments.length; i++) { %>
-    <li>
-        <div>
-            <span style="text-align:left">
-            [<%- comments[i].id %>]</span>
-            <span style="text-align:left">
-            <%- comments[i].comment %></span>
-            by
-            <span style="text-align:left">
-            <%- comments[i].author %></span>
-            <% if(comments[i].canRemove) { %>
-            -   <span style="text-align:left">
-                <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a></span>
-            <% } %>
         </div>
-    </li>
-    <% } %>
-</ol>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Comments</h2>
+
+
+
+
+
+    <ol class="list-group">
+        <% for (var i = 0; i < comments.length; i++) { %>
+        <li class="list-group-item">
+
+            <h4 class="list-group-item-heading"><%- comments[i].comment %> by <%- comments[i].author %></h4>
+
+            <% if(comments[i].canRemove) { %>
+            <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a>
+            <% } %>
+
+
+        </li>
+        <% } %>
+    </ol>
+
+</div>
+
+<!--<h3>Comments: </h3>-->
+<!--<ol>-->
+    <!--<% for (var i = 0; i < comments.length; i++) { %>-->
+    <!--<li>-->
+        <!--<div>-->
+            <!--<span style="text-align:left">-->
+            <!--[<%- comments[i].id %>]</span>-->
+            <!--<span style="text-align:left">-->
+            <!--<%- comments[i].comment %></span>-->
+            <!--by-->
+            <!--<span style="text-align:left">-->
+            <!--<%- comments[i].author %></span>-->
+            <!--<% if(comments[i].canRemove) { %>-->
+            <!-- -   <span style="text-align:left">-->
+                <!--<a href="<%= 'remove?id=' + comments[i].id %>">Remove</a></span>-->
+            <!--<% } %>-->
+        <!--</div>-->
+    <!--</li>-->
+    <!--<% } %>-->
+<!--</ol>-->
 
 
 

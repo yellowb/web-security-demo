@@ -12,36 +12,32 @@
 </head>
 <body>
 
-<!--<h1>You should login first!</h1>-->
-<!--<form action="/login/check" method="post">-->
-    <!--User ID: (yellow/tom)<br>-->
-    <!--<input type="text" name="userid"><br>-->
-    <!--Password:<br>-->
-    <!--<input type="password" name="password"><br><br>-->
-    <!--<input type="submit" value="Login">-->
-    <!--<input type="reset">-->
-<!--</form>-->
-
-
 <div class="jumbotron text-center">
-    <h1>You should <mark>login</mark> first</h1>
+    <h1>You should
+        <mark>login</mark>
+        first
+    </h1>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col-xs-6 col-md-4 col-center-block">
             <form action="/login/check" method="post">
-                User ID: (yellow/tom)<br>
-                <input type="text" name="userid"><br>
-                Password:<br>
-                <input type="password" name="password"><br><br>
-                <input type="submit" value="Login">
-                <input type="reset">
+                <div class="form-group">
+                    <label for="userid">User ID: (yellow/tom)</label>
+                    <input type="text" class="form-control input-lg" id="userid" name="userid">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control input-lg" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="reset" class="btn btn-default">
             </form>
+
         </div>
     </div>
 </div>
-
 
 
 </body>
