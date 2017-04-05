@@ -40,7 +40,7 @@
     <ol class="list-group">
         <% for (var i = 0; i < comments.length; i++) { %>
         <li class="list-group-item">
-            <h4 class="list-group-item-heading"><%- comments[i].comment %> by <%- comments[i].author %></h4>
+            <h3 class="list-group-item-heading"><%- comments[i].comment %> <kbd><%- comments[i].author %></kbd></h3>
             <% if(comments[i].canRemove) { %>
             <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a>
             <% } %>
