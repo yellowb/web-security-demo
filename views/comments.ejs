@@ -9,36 +9,44 @@
 <body>
 
 <p><a href="/login/logout">Logout</a></p>
-<h1>Post your comments!</h1>
-<h2>Welcome! <%= userid %></h2>
 
+<h1>Welcome! <%= userid %>. Post your comments!</h1>
+
+<form action="/comments/post" method="post">
+    <textarea rows="4" cols="50" placeholder="Write your comment here!" name="comment"></textarea><br>
+    <input type="submit" value="Submit">
+    <input type="reset">
+</form>
+
+
+<h3>Comments: </h3>
 <ol>
     <% for (var i = 0; i < comments.length; i++) { %>
     <li>
         <div>
-            <!--<span style="text-align:left">-->
-            <!--<%- comments[i].id %></span>-->
+            <span style="text-align:left">
+            [<%- comments[i].id %>]</span>
             <span style="text-align:left">
             <%- comments[i].comment %></span>
             by
             <span style="text-align:left">
             <%- comments[i].author %></span>
-             -
-            <span style="text-align:left">
-            <%- comments[i].canRemove %></span>
+
+            <% if(comments[i].canRemove) { %>
+            -
+                <span style="text-align:left">
+                <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a></span>
+            <% } %>
         </div>
     </li>
     <% } %>
 </ol>
 
 
-
-
 <script type="text/javascript" src="../static/lib/jQuery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../static/lib/jquery.cookie/jquery.cookie.js"></script>
 </body>
-
 
 
 </html>

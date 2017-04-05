@@ -28,14 +28,14 @@ router.post('/post', function (req, res, next) {
     var userid = req.session.userid,
         comment = req.body.comment;
     commentStorage.addComment(comment, userid);
-    res.send('{"result": "succeed"}');
+    res.redirect('/comments/list');
 });
 
 router.get('/remove', function (req, res, next) {
     var userid = req.session.userid,
         id = req.param('id');
     commentStorage.removeById(id);
-    res.send('{"result": "succeed"}');
+    res.redirect('/comments/list');
 });
 
 
