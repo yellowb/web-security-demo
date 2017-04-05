@@ -39,6 +39,7 @@ app.use(expressSession({
 app.use('/comments', require('./routes/comments'));
 app.use('/login', require('./routes/login'));
 app.use('/hacker', require('./routes/hacker'));
+app.use('/search', require('./routes/search'));
 
 //// catch 404 and forward to error handler
 //app.use(function(req, res, next) {

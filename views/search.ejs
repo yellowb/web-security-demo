@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css">
+    <script type="text/javascript" src="../static/lib/jQuery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/lib/jquery.cookie/jquery.cookie.js"></script>
+</head>
+<body>
+
+<p><a href="/login/logout">Logout</a>
+    <a href="/comments/list">Comments</a></p>
+
+<h1>Welcome! <%= userid %>. You can search anything!</h1>
+
+<input id="keyword" type="text" name="keyword"/>
+<button id="button" type="button">Search</button>
+<br/>
+
+<div>
+    <p id="result"></p>
+</div>
+
+<script type="text/javascript" src="../static/javascripts/searchService.js"></script>
+</body>
+
+</html>
