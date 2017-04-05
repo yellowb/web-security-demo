@@ -20,14 +20,17 @@ function getAllComments() {
 }
 
 function removeById(id) {
-    if(!id && comments.length > 0) {
+    if(!!id && comments.length > 0) {
         _.remove(comments, function(obj) {
-            return obj.id === id;
+            return obj.id == id;
         });
     }
 }
 
-addComment('<script>(function(){alert(1);})()</script>', 'yellow');
+//addComment('<script>(function(){alert(1);})()</script>', 'yellow');
+
+addComment('Yellow happy', 'yellow');
+addComment('Tom upset', 'tom');
 
 module.exports = {
     addComment: addComment,
