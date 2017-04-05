@@ -27,13 +27,8 @@ function removeById(id) {
     }
 }
 
-//addComment('<script>(function(){alert(1);})()</script>', 'yellow');
-//addComment('<img src="#" onerror="(function(){alert(1);})()">', 'yellow');
-// <a href="/comments/remove?id=1">good thing</a>
-// <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/js/tu_329aca4.js"></script>
-
-addComment('Yellow happy', 'yellow');
-addComment('Tom upset', 'tom');
+addComment('不错这很清真', 'yellow');
+addComment('感觉自己萌萌哒', 'tom');
 
 module.exports = {
     addComment: addComment,

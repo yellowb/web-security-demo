@@ -5,6 +5,9 @@
     <title>Comments</title>
     <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css">
+    <script type="text/javascript" src="../static/lib/jQuery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/lib/jquery.cookie/jquery.cookie.js"></script>
 </head>
 <body>
 
@@ -31,10 +34,8 @@
             by
             <span style="text-align:left">
             <%- comments[i].author %></span>
-
             <% if(comments[i].canRemove) { %>
-            -
-                <span style="text-align:left">
+            -   <span style="text-align:left">
                 <a href="<%= 'remove?id=' + comments[i].id %>">Remove</a></span>
             <% } %>
         </div>
@@ -43,9 +44,7 @@
 </ol>
 
 
-<script type="text/javascript" src="../static/lib/jQuery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="../static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../static/lib/jquery.cookie/jquery.cookie.js"></script>
+
 </body>
 
 
