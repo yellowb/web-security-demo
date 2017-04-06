@@ -27,8 +27,8 @@ function removeById(id) {
     }
 }
 
-addComment('不错这很清真', 'yellow');
-addComment('感觉自己萌萌哒', 'tom');
+addComment('不错这很清真.', 'yellow');
+addComment('感觉自己萌萌哒.', 'tom');
 
 module.exports = {
     addComment: addComment,
