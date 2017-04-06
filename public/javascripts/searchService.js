@@ -4,5 +4,5 @@
 
 $('#button').click(function() {
     var keyword = $('#keyword').val();
-    $('#result').html('Can not found anything for: ' + keyword);
+    $('#result').html('Can not find anything for: ' + keyword);
 });
